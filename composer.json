@@ -1,0 +1,50 @@
+{
+    "name": "brtdv/twelvedata-php-sdk",
+    "description": "Unofficial SDK for the TwelveData.com API",
+    "keywords": [
+        "twelvedata",
+        "api",
+        "stock",
+        "symbol",
+        "exchange",
+        "crypto",
+        "cryptocurrency"
+    ],
+    "support": {
+        "docs": "https://github.com/brtdv/twelvedata-php-sdk/blob/main/docs/index.md",
+        "source": "https://github.com/brtdv/twelvedata-php-sdk"
+    },
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bert Devriese",
+            "email": "bert@builtinbruges.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Brtdv\\TwelveData\\": "src/"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm"
+    },
+    "require": {
+        "php": "^8.1",
+        "php-http/client-common": "^2.6",
+        "php-http/discovery": "^1.14",
+        "php-http/multipart-stream-builder": "^1.2",
+        "psr/http-client": "^1.0",
+        "webmozart/assert": "^1.11"
+    },
+    "require-dev": {
+        "nyholm/psr7": "^1.5.0",
+        "symfony/http-client": "^6.0",
+        "vimeo/psalm": "^5.4"
+    },
+    "suggest": {
+        "nyholm/psr7": "PSR-7 message implementation",
+        "symfony/http-client": "HTTP client"
+    }
+}
