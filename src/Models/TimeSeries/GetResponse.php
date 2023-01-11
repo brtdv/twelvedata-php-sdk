@@ -20,7 +20,7 @@ class GetResponse implements ApiResponse, StatusProvider
         $model = new self();
 
         $model->meta   = StockMeta::create($responseData['meta']);
-        $model->status = $responseData['status']
+        $model->status = $responseData['status'];
 
         $values = [];
 
