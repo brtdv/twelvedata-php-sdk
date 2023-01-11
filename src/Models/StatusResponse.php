@@ -4,9 +4,9 @@ namespace Brtdv\TwelveData\Models;
 
 trait StatusResponse
 {
-    private ?Status $status;
+    private ?string $status;
 
-    public function getStatus(): ?Status
+    public function getStatus(): ?string
     {
         return $this->status;
     }

@@ -3,7 +3,6 @@
 namespace Brtdv\TwelveData\Models\TimeSeries;
 
 use Brtdv\TwelveData\Models\ApiResponse;
-use Brtdv\TwelveData\Models\Status;
 use Brtdv\TwelveData\Models\StatusProvider;
 use Brtdv\TwelveData\Models\StatusResponse;
 
@@ -21,7 +20,7 @@ class GetResponse implements ApiResponse, StatusProvider
         $model = new self();
 
         $model->meta   = StockMeta::create($responseData['meta']);
-        $model->status = Status::from($responseData['status']);
+        $model->status = $responseData['status']
 
         $values = [];
 

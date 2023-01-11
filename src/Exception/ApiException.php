@@ -4,19 +4,19 @@ namespace Brtdv\TwelveData\Exception;
 
 use RuntimeException;
 use Throwable;
-use Brtdv\TwelveData\Models\Status;
+
 
 class ApiException extends RuntimeException
 {
-    private Status $status;
+    private string $status;
 
-    public function __construct(string $message = "", int $code = 0, ?Throwable $previous = null, ?Status $status = null)
+    public function __construct(string $message = "", int $code = 0, ?Throwable $previous = null, ?string $status = null)
     {
         parent::__construct($message, $code, $previous);
         $this->status = $status;
     }
 
-    public function getStatus(): Status
+    public function getStatus(): string
     {
         return $this->status;
     }

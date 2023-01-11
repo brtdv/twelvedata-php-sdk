@@ -4,5 +4,5 @@ namespace Brtdv\TwelveData\Models;
 
 interface StatusProvider
 {
-    public function getStatus(): ?Status;
+    public function getStatus(): ?string;
 }

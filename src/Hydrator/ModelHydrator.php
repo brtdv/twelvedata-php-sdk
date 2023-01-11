@@ -5,7 +5,7 @@ namespace Brtdv\TwelveData\Hydrator;
 use Psr\Http\Message\ResponseInterface;
 use Brtdv\TwelveData\Exception\ApiException;
 use Brtdv\TwelveData\Models\ApiResponse;
-use Brtdv\TwelveData\Models\Status;
+
 
 final class ModelHydrator implements Hydrator
 {
@@ -21,8 +21,8 @@ final class ModelHydrator implements Hydrator
 
         $data = json_decode($body, true, 512, JSON_THROW_ON_ERROR);
 
-        if (isset($data['status']) && Status::ERROR === Status::from($data['status'])) {
-            throw new ApiException($data['message'], $data['code'], null, Status::from($data['status']));
+        if (isset($data['status']) && 'error' == $data['status']) {
+            throw new ApiException($data['message'], $data['code'], null, $data['status']);
         }
 
         if (is_subclass_of($class, ApiResponse::class)) {
