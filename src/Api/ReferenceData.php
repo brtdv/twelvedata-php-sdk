@@ -18,6 +18,9 @@ use Brtdv\TwelveData\Models\SymbolSearch\GetResponse as SymbolSearchGetResponse;
  */
 class ReferenceData extends HttpApi
 {
+    /**
+     * @return StocksGetResponse
+     */
     public function stocks(array $params = []): ApiResponse
     {
         $response = $this->httpGet('/stocks', $params);
@@ -25,6 +28,9 @@ class ReferenceData extends HttpApi
         return $this->hydrateResponse($response, StocksGetResponse::class);
     }
 
+    /**
+     * @return ForexPairsGetResponse
+     */
     public function forexPairs(array $params = []): ApiResponse
     {
         $response = $this->httpGet('/forex_pairs', $params);
@@ -32,6 +38,9 @@ class ReferenceData extends HttpApi
         return $this->hydrateResponse($response, ForexPairsGetResponse::class);
     }
 
+    /**
+     * @return CryptoCurrenciesGetResponse
+     */
     public function cryptoCurrencies(array $params = []): ApiResponse
     {
         $response = $this->httpGet('/cryptocurrencies', $params);
@@ -39,6 +48,9 @@ class ReferenceData extends HttpApi
         return $this->hydrateResponse($response, CryptoCurrenciesGetResponse::class);
     }
 
+    /**
+     * @return ExchangesGetResponse
+     */
     public function exchanges(array $params = []): ApiResponse
     {
         $response = $this->httpGet('/exchanges', $params);
@@ -46,6 +58,9 @@ class ReferenceData extends HttpApi
         return $this->hydrateResponse($response, ExchangesGetResponse::class);
     }
 
+    /**
+     * @return SymbolSearchGetResponse
+     */
     public function symbolSearch(array $params = []): ApiResponse
     {
         if (!isset($params['symbol'])) {

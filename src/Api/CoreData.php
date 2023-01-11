@@ -26,6 +26,9 @@ class CoreData extends HttpApi
         return $this->hydrateResponse($response, TimeSeriesGetResponse::class);
     }
 
+    /**
+     * @return QuoteGetResponse
+     */
     public function quote(array $params = []): ApiResponse
     {
         Assert::keyExists($params, 'symbol');
@@ -35,6 +38,9 @@ class CoreData extends HttpApi
         return $this->hydrateResponse($response, QuoteGetResponse::class);
     }
 
+    /**
+     * @return RealTimePriceGetResponse
+     */
     public function realTimePrice(array $params = []): ApiResponse
     {
         Assert::keyExists($params, 'symbol');

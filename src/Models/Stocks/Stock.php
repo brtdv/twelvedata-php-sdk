@@ -4,6 +4,7 @@ namespace Brtdv\TwelveData\Models\Stocks;
 
 use DateTimeZone;
 use Brtdv\TwelveData\Models\ApiModel;
+use Exception;
 use Webmozart\Assert\Assert;
 
 class Stock implements ApiModel
@@ -21,13 +22,13 @@ class Stock implements ApiModel
      */
     public static function create(array $data, ?DateTimeZone $timeZone = null)
     {
-        Assert::nullOrStringNotEmpty($data['symbol']);
-        Assert::nullOrStringNotEmpty($data['name']);
-        Assert::nullOrStringNotEmpty($data['currency']);
-        Assert::nullOrStringNotEmpty($data['exchange']);
-        Assert::nullOrStringNotEmpty($data['mic_code']);
-        Assert::nullOrStringNotEmpty($data['country']);
-        Assert::nullOrStringNotEmpty($data['type']);
+        Assert::nullOrStringNotEmpty($data['symbol'] ?? null);
+        Assert::nullOrString($data['name'] ?? null);
+        Assert::nullOrStringNotEmpty($data['currency'] ?? null);
+        Assert::nullOrStringNotEmpty($data['exchange'] ?? null);
+        Assert::nullOrStringNotEmpty($data['mic_code'] ?? null);
+        Assert::nullOrString($data['country'] ?? null);
+        Assert::nullOrStringNotEmpty($data['type'] ?? null);
 
         $object = new self();
 

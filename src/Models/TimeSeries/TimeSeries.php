@@ -30,11 +30,11 @@ class TimeSeries implements ApiModel
         $object = new self();
 
         $object->datetime = isset($data['datetime']) ? DateTime::createFromFormat('Y-m-d H:i:s', $data['datetime'], $timeZone) : null;
-        $object->open     = $data['open'] ? floatval($data['open']) : null;
-        $object->high     = $data['high'] ? floatval($data['high']) : null;
-        $object->low      = $data['low'] ? floatval($data['low']) : null;
-        $object->close    = $data['close'] ? floatval($data['close']) : null;
-        $object->volume   = $data['volume'] ? intval($data['volume']) : null;
+        $object->open     = $data['open'] ? floatval($data['open']) : 0;
+        $object->high     = $data['high'] ? floatval($data['high']) : 0;
+        $object->low      = $data['low'] ? floatval($data['low']) : 0;
+        $object->close    = $data['close'] ? floatval($data['close']) : 0;
+        $object->volume   = $data['volume'] ? intval($data['volume']) : 0;
 
         return $object;
     }

@@ -152,7 +152,7 @@ $response = $twelveDataApi->coreData()->timeSeries([
 ]);
 
 $apiStatus = $response->getStatus(); // TwelveData\Models\Status::OK or TwelveData\Models\Status::ERROR
-$candles = $response->getData(); // array of timeseries candles (TwelveData\Models\TimeSeries\TimeSeries)
+$candles = $response->getValues(); // array of timeseries candles (TwelveData\Models\TimeSeries\TimeSeries)
 
 foreach ($candles as $candle) {
     echo $candle->getOpen(); // 148.44000
