@@ -1,7 +1,7 @@
 # TwelveData PHP Client
 
-[![Latest Version](https://img.shields.io/github/release/brtdv/twelvedata-php-sdk.svg?style=flat-square)](https://github.com/brtdv/twelvedata-php-sdk/releases)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Latest Version](https://img.shields.io/github/v/tag/brtdv/twelvedata-php-sdk?label=latest%20release&style=flat)](https://github.com/brtdv/twelvedata-php-sdk/releases)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE.md)
 
 Unofficial PHP SDK for the [TwelveData](https://twelvedata.com) stock API service. This SDK contains methods for easy interaction with the TwelveData API. This SDK is not yet feature complete. This is however the long term goal. Below are some examples and lists of what exactly is implemented at this moment. The implementation of this library is heavily based on the implementation of the [Mailgun SDK](https://github.com/mailgun/mailgun-php).
 
