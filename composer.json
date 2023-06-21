@@ -46,5 +46,10 @@
     "suggest": {
         "nyholm/psr7": "PSR-7 message implementation",
         "symfony/http-client": "HTTP client"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
     }
 }
